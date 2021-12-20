@@ -1,0 +1,570 @@
+/* alice-regular - latin */
+@font-face {
+    font-family: 'Alice';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/alice-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/alice-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  .container {
+      display: flex;
+      justify-content: space-between;
+      background-color: #76c991; 
+      align-items: center;
+  }
+
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Alice';
+      background-color: #bbecca;
+  }
+
+  .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 20px;
+  }
+  li {
+	margin-right:40px; /*Добавляем отступ у пунктов меню*/
+}
+
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+  }
+    /*плавное подчеркивание и левая рамка */
+  .line a { 
+    border-left: 1.5px solid rgb(36, 36, 36); /* Ширина, цвет и вид линии */ 
+    padding: 1.5px; /* Расстояние от линии до текста */
+    background: #76c991; /* Цвет фона */
+    color: rgb(22, 34, 19); /* Цвет текста */
+}
+
+.line a {
+	text-decoration:none; /*Убираем стандартное подчёркивание ссылки если оно ещё не убрано*/
+	display: inline-block; /*делаем чтобы наша ссылка из строчного элемента превратилась в строчно-блочный*/
+	line-height: 1; /*Задаём высоту строки (можно в пикселях)*/
+	color:rgb(224, 245, 209);/*Задаём цвет ссылки*/
+}
+.line a:after {
+	display: block; /*превращаем его в блочный элемент*/
+	content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+	height: 2px; /*задаём высоту линии*/
+	width: 0%; /*задаём начальную ширину элемента (линии)*/
+	background-color: rgb(36, 36, 36); /*цвет фона элемента*/
+	transition: width 0.1s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+}
+.line a:hover:after,
+.line a:focus:after {
+width: 100%;
+}
+
+header {
+    text-align: center;
+    background-color: rgb(77, 170, 90);
+    background-attachment: fixed;
+    background-size: cover;
+    padding-left: 140px;
+    padding-top: 150px;
+}
+
+h1 {
+    font-size: 45px;
+    color: rgb(204, 226, 210);
+}
+
+h3 {
+    font-size: 25px;
+    color: rgb(9, 12, 10);
+}
+
+h2 {
+    font-size: 20px;
+    color: rgb(9, 12, 10);
+}
+
+h4 {
+    font-size: 17px;
+    color: rgb(9, 12, 10);
+}
+
+
+
+footer {
+    /*max-width: 1024px;*/
+    height: 80px;
+    margin: auto;
+    margin-left: 2px;
+    border: 3px solid #76c991;
+    background-color: #e2eff8;
+}
+
+.container_2 {
+    display: flex;
+    /*justify-content: space-between;*/
+    /*background-color: #ffffff;*/
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex-row-div {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-right: 300px;
+    align-items: flex-start;
+}
+
+.flex-row-div-between-center {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    align-items: flex-end;
+    margin-top: 30px;
+}
+
+.wrapper {
+    max-width: 1024px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: rgb(214, 252, 155);
+}
+
+.block1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*justify-content: flex-start;*/
+    /*max-width: 1024px;*/
+    height: 300px;
+    padding-left: 90px;
+    padding-right: 90px;
+    /*padding-top: 100px;*/
+}
+
+.glavnaya /*{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}*/
+
+.text_1 {
+    display: flex;
+    justify-content: center;
+    color: rgb(26, 37, 29);
+    
+}
+
+.block2 {
+    /*display: flex;*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    padding-left: 90px;
+    background-color: #76c991;
+}
+
+.text_2 {
+    text-align: center;
+    padding-top: 20px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    background-size: cover;
+    /*padding-left: 450px;*/
+    align-items: center;
+    justify-content: space-around;
+    color: rgb (26, 37, 29); 
+}
+
+.compet {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.block3 {
+    /*display: flex;*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    padding-left: 90px;
+}
+
+.text_3 {
+    text-align: center;
+    padding-top: 20px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    background-size: cover;
+    /*padding-left: 450px;*/
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(26, 37, 29); 
+}
+
+.uslugi {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type:circle;
+}
+
+.spisoc_1 {
+    display: flex;
+    width:49%;
+    float:left;
+}
+
+.spisoc_2 {
+    display: flex;
+    width:49%;
+    float:left;
+}
+
+.block4 {
+    /*display: flex;*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    padding-left: 90px;
+    background-color: #76c991;
+}
+
+.text_4 {
+    text-align: center;
+    padding-top: 20px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    background-size: cover;
+    /*padding-left: 450px;*/
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(26, 37, 29); 
+}
+
+a.button {
+    display: inline-block;
+    background: #76c991;
+    color: rgb(21, 119, 50);
+    padding: 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: Tahoma;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 100;
+  }
+  
+
+.cnopka {
+  margin: 24px;
+  text-align: center;
+}
+
+.text_5 {
+    text-align: center;
+    padding-top: 20px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    background-size: cover;
+    /*padding-left: 450px;*/
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(26, 37, 29); 
+}
+
+.table {
+    margin: auto;
+	width: 90%;
+	margin-bottom: 20px;
+	border: 2px solid rgb(26, 37, 29);
+	/*border-top: 0,5px solid rgb(26, 37, 29);
+	border-bottom: 0,5px solid rgb(26, 37, 29);*/
+	font-size: 15px;
+	/*background: #ffffff!important;*/
+}
+.table th {
+	font-weight: bold;
+	padding: 7px;
+	background: #76c991;
+	border: none;
+	text-align: left;
+	font-size: 17px;
+    text-align: center;
+}
+.table td {
+	padding: 5px;
+	border: none;
+	font-size: 16px;
+    
+}
+.table tbody tr {
+	background: #bbecca!important;
+}
+
+
+
+/*Для портфолио*/
+.section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.picture_1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    order: 1;
+    max-width: 50%;
+    height: auto;
+    
+}
+
+.wording_1 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: flex-end;
+    color: rgb(26, 37, 29);
+    order: 2;
+    left: 35%;
+    right: 10%;
+}
+
+.section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.picture_2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.wording_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(26, 37, 29);
+    padding-right: 90px;
+    
+}
+
+.section3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.section4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+
+/*для контанктов*/
+
+.grid-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2vw;
+    justify-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #76c991;
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+	width: 200px;
+	border:3px ridge #76c991;
+	padding: 30px;
+	border-radius: 30px;
+	box-shadow: 1px 1px 6px 3px #76c991;
+}
+
+.flex-row-kontakt {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.flex-row-div-kontakt {
+    display: flex;
+    justify-content: center;
+    /*margin-top: 30px;
+    margin-right: 300px;
+    align-items: flex-start;*/
+}
+
+/*Для формы*/
+.flex-col
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+    .border_div
+    {
+        border: solid 1px #76c991;
+        border-radius: 100px;
+        padding: 50px;
+        margin: 20px;
+        box-shadow: 1px 1px 6px 3px #76c991;
+    }
+
+    .middle 
+    { 
+    /*grid-area: middle;*/  
+        display: flex;
+        /*flex-direction: column;*/
+        align-items: center;
+        width: 300px;
+        justify-content: center;
+        border: solid 1px #76c991;
+        border-radius: 100px;
+        padding: 50px;
+        margin: 20px;
+        box-shadow: 1px 1px 6px 3px #76c991;
+    }    
+
+    .left 
+        { 
+        grid-area: left; 
+        }
+        .right
+        { 
+        grid-area: right; 
+        }
+
+        .form-div
+    {
+        padding-bottom: 20px;
+    }
+    .flex-row
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .align-center
+    {
+        text-align: center;
+    }
+
+    .input-text
+    {
+    border-radius: 10px;
+    background-color: #bbecca;
+    border-color: #76c991;
+    width: 160px;
+    height: 30px;
+    }
+
+
+    /*для js*/
+    .form1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-bottom: 2px solid #76c991;
+    }
+
+    /*Фотогалерея*/
+    .block{
+        border: 2px solid rgb(233, 220, 100); 
+        width: 600px;
+        height: 400px;
+        margin: 0 auto;
+        background-size: cover;
+    }
+
+    .gal1{
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 100px 50px;
+        text-align: center;
+        color: rgb(238, 235, 77);
+    }
+    .mini{
+        text-align: center;
+    }
+    .gal2{
+        max-width: 1200px;
+        margin: 30 auto;
+        padding: 30px;
+        text-align: center;
+        color: rgb(228, 238, 90);
+    }
+    .slider{
+        border: 2px solid rgb(5, 4, 4);
+        width: 255px;
+        height: 255px;
+        margin: 20 auto;
+        overflow: hidden;
+    }
+    .slider-line{
+        display: flex;
+        height: 256px;
+        width: 1024px;
+        background: rgb(224, 221, 12);
+        position: relative;
+        left: 0;
+        transition: all ease 1s;
+    }

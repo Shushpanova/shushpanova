@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+        .block{
+            border: 2px solid rgb(219, 115, 115);
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            background-size: cover;
+        }
+    </style>
+
+    <script>
+        function checkForm(el)
+        {
+              console.log("Проверка");
+        
+        
+         var fail = "";
+        var viv = name.value + email.value + tel.value;
+        if (name1 == ""|| email == ""|| tel == "")
+        fail="заполните все поля";
+        else if(name1.length <=1||name1.length>50)
+        fail="Введите корректное имя!";
+        else if(email.conteins("1")){
+        fail="Введите корректный email!"
+        }
+        if (fail == ""){
+            document.getElementById('error').innerHTML = fail;
+            return false;
+        } 
+           
+           else {document.getElementById('vivod').innerHTML = viv;
+           return false;
+            }    
+        }
+            </script>
+            <script>
+                function f4(){
+                    document.getElementById('posta').checked=true
+                    document.getElementById('tel').checked=true
+                    document.getElementById('tel posta').checked=true
+                }
+            </script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="../img/logo.jpg" alt="Логотип" height="100" width="100"></a>
+            </div>
+            <div class="line">
+        <ul class="menu">
+            <li><a href="pages/o sebe.html">О себе</a></li>
+            <li><a href="pages/resume.html">Резюме</a></li>
+            <li><a href="pages/portfolio.html">Портфолио</a></li>
+            <li><a href="pages/competencii.html">Компетенции</a></li>
+            <li><a href="pages/contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+    </div>
+    </nav>
+    <header>
+        <h1>Веб-технологии</h1>
+        <h3>Университет "Дубна"</h3>
+    </header>
+
+    <main class="wraper">
+<!--Форма-->
+        <div class="form1">
+        <div class="left"></div>
+        <div class="middle">
+    <form action="" method="get" id="form1" onsubmit="return checkForm(this)">
+    <div class="form-div" id="svaz">
+        <div>Как с вами связаться:</div>
+        <label for=""><input type="radio" id="tele" value="По номеру телефону">По номеру телефона</label><br>
+        <label for=""><input type="radio" id="posta" value="Электронная почта">Электронная почта</label><br>
+        <label for=""><input type="radio" id="nocomment" value="Не отвечать">Не отвечать</label><br>
+    </div>
+    <div class="form-div">
+        <label for="theme">Укажите тему вопроса</label><br>
+        <select name="theme" id="theme" class="input-text">
+            <option value="obuchenie">обучение</option>
+            <option value="sotr">сотрудничество</option>
+            <option value="drugoe">другое</option>
+        </select>
+    </div>
+    <div class="form-div">
+        <div>Любите жаб?</div>
+        <label for="checkbox1"><input type="checkbox" id="checkbox">Да</label><br>
+        <label for="checkbox1"><input type="checkbox" id="checkbox">Нет</label><br>
+        <label for="checkbox1"><input type="checkbox" id="checkbox">Не определился</label><br>
+    </div>
+    <div class="form-div">
+        <label for="name" class="flex-row">Введите имя</label>
+        <input type="text" name="name1" id="name1" class="input-text">
+    </div>
+    <div class="form-div" id="email1">
+        <label for="email" class="flex-row">Введите адрес электронной почты</label>
+        <input type="email" name="email" id="email" class="input-text">
+    </div>
+    <div class="form-div" id="tel1">
+        <label for="tel" class="flex-row">Введите номер мобильного телефона</label>
+        </label>
+        <input type="tel" name="tel" id="tel" class="input-text">
+    </div>
+    <div class="form-div">
+        <div>Задайте вопрос</div>
+        <div>
+            <textarea cols="30"></textarea>
+        </div>
+    </div>
+
+    <div class="align-center">
+        <input type="submit" value="Отправить вопрос" class="input-text">
+    </div>
+    <div id="error" style="color: #770e0e;"> </div>
+    <div id="vivod" style="color: #bbecca;"> </div>
+    </form>
+    </div>
+    <div class="right"></div>
+</div>
+
+<!--Фотогалерея-->
+<section>
+    <div class="block">
+    <script>
+        var arr=['jj1.jpg','jj2.jpg','jj3.jpg','jj4.jpg','jj5.jpg']
+        block=document.querySelector('.block'),
+        i=0;
+        block.onclick = boo;
+        function boo(){
+            block.style.backgroundImage='url(img/'+arr[i]+')';
+            i++;
+
+            if (i==arr.length){
+                i=0;
+            }
+            
+        }
+    </script>
+    </div>
+</section>
+<section>
+    <div class="gal1">
+        <div id="big">
+            <img src="../img/jj1.jpg" alt="" width="900" id="bigp" class="bigp">
+        </div>
+        <div>
+            <img src="../img/jj2.jpg" alt="" width="300" class="smallp">
+            <img src="../img/jj3.jpg" alt="" width="300" class="smallp">
+            <img src="../img/jj4.jpg" alt="" width="300" class="smallp">
+            <img src="../img/jj5.jpg" alt="" width="300" class="smallp">
+        </div>
+    </div>
+    <script>
+        let el = document.getElementsByClassName('smallp');
+        for (i=0; i<el.length; i++) {
+            el[i].onclick = pic
+        }
+        function pic(event) {
+            x=document.getElementById("bigp");
+            x.src = event.target.src;
+        }
+            
+    </script>
+</section>
+<section>
+    <div class="gal2">
+        <div class="slider">
+            <div class="slider-line">
+                <img src="../img/jj1.jpg" alt="" class="mini">
+                <img src="../img/jj2.jpg" alt="" class="mini">
+                <img src="../img/jj3.jpg" alt="" class="mini">
+                <img src="../img/jj4.jpg" alt="" class="mini">
+                <img src="../img/jj5.jpg" alt="" class="mini">
+            </div>
+        </div>
+        <button class="slider-prev">НАЗАД</button>
+        <button class="slider-next">ВПЕРЕД</button>
+
+    </div>
+    <script>
+        let offset = 0;
+        const sliderLine = document.querySelector('.slider-line');
+        document.querySelector('.slider-next').addEventListener('click',function(){
+            offset=offset+256;
+            //offset+=256;
+            if (offset > 768){
+                offset=0;
+            }
+            sliderLine.style.left = -offset + 'px'
+        });
+
+        document.querySelector('slider-prev').addEventListener('click',function(){
+            offset=offset-256;
+            //offset+=256;
+            if (offset < 0){
+                offset= 768;
+            }
+            sliderLine.style.left = -offset + 'px'
+        });
+
+    </script>
+</section>
+
+    </main>
+
+
+    <footer>
+        <div class="container_2">
+        <div class="flex-row-div">
+            <a href="https://www.facebook.com/unidubnanews/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://vk.com/unidubna_official" target="_blank"><i class="fab fa-vk"></i></a>
+            <a href="https://uni-dubna.ru/" target="_blank"><i class="fas fa-globe"></i></a>
+        </div>
+        <div class="flex-row-div-between-center">
+            Сайт разработан Шушпановой Елизаветой, Copyright © 2021.
+        </div>
+</div>
+    </footer>
+
+    <script>
+        document.getElementById('svaz').addEventListener('click',f3)
+        function f3() {
+            let x =document.getElementById('tel1');
+            let y =document.getElementById('email1');
+            let z =document.getElementById('tel1 email1');
+            if(document.getElementById('posta').checked){
+                y.style.visibility = "visible";
+            } else{
+                y.style.visibility = "hidden"}
+                if(document.getElementById('posta').checked){
+                y.style.visibility = "visible";
+            } else{
+                y.style.visibility = "hidden"}
+
+        }
+
+    </script>
+    
+</body>
+</html>
